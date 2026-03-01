@@ -44,29 +44,11 @@ const loop = () =>{
 
 };
 
-function verificarOrientacao() {
-    const landscape = window.innerWidth > window.innerHeight
-
-    if (landscape){
-        document.body.classList.add('landscape');
-        document.body.classList.remove('portrait');
-    } else{
-        document.body.classList.add('portrait');
-        document.body.classList.remove('landscape');
-    }
-}
-
-
 document.addEventListener('keydown', jump)
 document.addEventListener('touchstart', jump, {passive: false})
 
 mario.addEventListener('animationend', () => {
     mario.classList.remove('jump');
 });
-
-    verificarOrientacao();
-
-    window.addEventListener('resize', verificarOrientacao);
-    window.addEventListener('orientationchange', verificarOrientacao);
 
 loop();
