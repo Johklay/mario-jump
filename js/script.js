@@ -10,14 +10,37 @@ const jump  = (event) => {
 
     mario.classList.add('jump')
 
-   
 }
+
+/*const restartButton = document.getElementById('restart')
+restartButton.style.display = 'block'
+
+restartButton.addEventListener('click', () =>{
+    score = 0;
+    scoreDisplay.textContent = score;
+    hasScored = false;
+});*/
+
+
+let score = 0;
+const scoreDisplay = document.querySelector('.score')
+let hasScored = false;
 
 const loop = () =>{
 
     const pipePosition = pipe.offsetLeft;
     const marioPosition = +window.getComputedStyle(mario).bottom.replace('px', '');
     const marioHeight = mario.clientHeight;
+
+     if(pipePosition < 0 && !hasScored) {
+        score++;
+        scoreDisplay.textContent = score;
+        hasScored = true;
+    }
+
+    if(pipePosition > window.innerWidth){
+        hasScored = false;
+    }
 
     const isPortrait = window.innerHeight > window.innerWidth;
     const limiteColisao = isPortrait ? 90 : 120;
@@ -44,7 +67,6 @@ const loop = () =>{
     }
 
     requestAnimationFrame(loop)
-
 };
 
 document.addEventListener('keydown', jump)
