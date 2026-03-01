@@ -46,6 +46,7 @@
     animation-play-state: paused;
 }
 
+
 @keyframes pipe-animation {
     from {
         right: -80px;
