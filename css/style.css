@@ -131,6 +131,36 @@ body.portrati .rotate-message{
 
 }
 
+@media (orientation: landscape){
+    .game-board {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .mario {
+        width: 120px;
+    }
+
+    .pipe {
+        width: 80px;
+    }
+}
+
+@media (max-width: 900px) and (orientation: landscape) {
+
+    .game-board {
+        height: 100vh;
+    }
+
+    .mario {
+        width: 90px;
+    }
+
+    .pipe {
+        width: 60px;
+    }
+}
+
 body{
     overflow: hidden;
 }
