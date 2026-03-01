@@ -7,21 +7,13 @@
 }
 
 .game-board{
-    width: 100%;
+    width: 100vw;
     height: 500px;
     border-bottom: 15px solid rgb(23, 186, 23);
     margin: 0 auto;
     position: relative;
     overflow: hidden;
     background: linear-gradient(#87CEEB, #e0f6ff);
-}
-
-body.portrait .game-board{
-    display: none;
-}
-
-body.landscape .game-board{
-    display: block;
 }
 
 .pipe{
@@ -50,21 +42,6 @@ body.landscape .game-board{
 
 .game-over .clouds{
     animation-play-state: paused;
-}
-
-.rotate.message{
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: black;
-    color: white;
-    font-size: 24px;
-    justify-content: center;
-    align-items: center;
-}
-
-body.portrati .rotate-message{
-    display: flex;
 }
 
 @keyframes pipe-animation {
@@ -133,31 +110,19 @@ body.portrati .rotate-message{
 
 @media (orientation: landscape){
     .game-board {
-        width: 100vw;
-        height: 100vh;
+        height: 70vh;
     }
 
     .mario {
-        width: 120px;
-    }
-
-    .pipe {
-        width: 80px;
-    }
-}
-
-@media (max-width: 900px) and (orientation: landscape) {
-
-    .game-board {
-        height: 100vh;
-    }
-
-    .mario {
-        width: 90px;
+        width: 110px;
     }
 
     .pipe {
         width: 60px;
+    }
+
+    .clouds{
+        width: 300px;
     }
 }
 
