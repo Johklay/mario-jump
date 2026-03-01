@@ -29,14 +29,10 @@ const loop = setInterval (() =>{
         mario.style.animation = 'none'
         mario.style.bottom = `${marioPosition}px`
 
-        const cloudPosition = cloud.offsetLeft
-        cloud.style.animation = 'none'
-        cloud.style.left = `${cloudPosition}px`
-
         document.body.classList.add('game-over')
 
         mario.src = 'img/game-over.png'
-        mario.style.width = '75px'
+        mario.style.width = '65px'
         mario.style.marginLeft = '50px'
 
         clearInterval(loop)
