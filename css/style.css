@@ -110,6 +110,19 @@
 
 }
 
+@media (orientation: landscape){ 
+    .game-board {
+        height: 100vh; 
+        } 
+
+    .mario { 
+        width: 110px; 
+    } 
+
+    .pipe { 
+        width: 60px;
+     }}
+
 body{
     overflow: hidden;
 }
