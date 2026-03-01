@@ -112,7 +112,7 @@
 
 @media (orientation: landscape){ 
     .game-board {
-        height: 100vh; 
+        height: 75vh; 
         } 
 
     .mario { 
