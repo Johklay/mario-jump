@@ -100,7 +100,7 @@
     }
 
     .pipe{
-        width: 50px;
+        width: 70px;
     }
 
     .clouds {
@@ -116,12 +116,18 @@
         } 
 
     .mario { 
-        width: 110px; 
+        width: 120px; 
     } 
 
     .pipe { 
-        width: 60px;
-     }}
+        width: 70px;
+     }
+
+    .clouds{
+        width: 500px;
+     }
+
+    }
 
 body{
     overflow: hidden;
