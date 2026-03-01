@@ -38,7 +38,7 @@ const loop = () =>{
 
         mario.src = 'img/game-over.png'
         mario.style.width = '60px'
-        mario.style.marginLeft = '50px'
+        mario.style.marginLeft = '30px'
 
         return;
     }
