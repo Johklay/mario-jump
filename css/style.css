@@ -31,7 +31,9 @@
 
 .clouds{
     position: absolute;
-    width: 500px;
+    width: 40vw;
+    max-width: 700px;
+    min-width: 250px;
     animation: clouds-animation 20s infinite linear;
     
 }
@@ -106,24 +108,6 @@
     }
 
 
-}
-
-@media (orientation: landscape){
-    .game-board {
-        height: 70vh;
-    }
-
-    .mario {
-        width: 110px;
-    }
-
-    .pipe {
-        width: 60px;
-    }
-
-    .clouds{
-        width: 300px;
-    }
 }
 
 body{

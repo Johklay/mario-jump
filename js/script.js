@@ -18,8 +18,11 @@ const loop = () =>{
     const pipePosition = pipe.offsetLeft;
     const marioPosition = +window.getComputedStyle(mario).bottom.replace('px', '');
     const marioHeight = mario.clientHeight;
+
+    const isPortrait = window.innerHeight > window.innerWidth;
+    const limiteColisao = isPortrait ? 90 : 120;
     
-    if (pipePosition <= 120 && pipePosition > 0 && marioPosition < mario.clientHeight * 0.6){
+    if (pipePosition <= limiteColisao && pipePosition > 0 && marioPosition < mario.clientHeight * 0.6){
 
         pipe.style.animation = 'none'
         pipe.style.left = `${pipePosition}px`
