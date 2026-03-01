@@ -37,7 +37,7 @@
 }
 
 .jump{
-    animation: jump 500ms  ease-out;
+    animation: jump 550ms  ease-out;
 }
 
 .game-over .clouds{
