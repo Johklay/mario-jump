@@ -2,18 +2,15 @@ const mario = document.querySelector('.mario')
 const pipe = document.querySelector('.pipe')
 const cloud = document.querySelector('.clouds')
 
-const jump  = () => {
+const jump  = (event) => {
     event?.preventDefault();
 
     if (document.body.classList.contains('game-over')) return;
+    if (mario.classList.contains('jump')) return;
 
     mario.classList.add('jump')
 
-    setTimeout(()=>{
-
-         mario.classList.remove('jump')
-
-    }, 500);
+   
 }
 
 const loop = setInterval (() =>{
@@ -22,13 +19,17 @@ const loop = setInterval (() =>{
     const marioPosition = +window.getComputedStyle(mario).bottom.replace('px', '');
     const marioHeight = mario.clientHeight;
     
-    if (pipePosition <= 120 && pipePosition > 0 && marioPosition < marioHeight * 0.5){
+    if (pipePosition <= 120 && pipePosition > 0 && marioPosition < mario.clientHeight * 0.6){
 
         pipe.style.animation = 'none'
         pipe.style.left = `${pipePosition}px`
 
         mario.style.animation = 'none'
         mario.style.bottom = `${marioPosition}px`
+
+        const cloudPosition = cloud.offsetLeft;
+        cloud.style.animation = 'none';
+        cloud.style.left = `${cloudPosition}px`;
 
         document.body.classList.add('game-over')
 
@@ -43,3 +44,7 @@ const loop = setInterval (() =>{
 
 document.addEventListener('keydown', jump)
 document.addEventListener('touchstart', jump)
+
+mario.addEventListener('animationend', () => {
+    mario.classList.remove('jump');
+});
