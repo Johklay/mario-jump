@@ -6,6 +6,40 @@
     box-sizing: border-box;
 }
 
+.start{
+    position: fixed ;
+    display: flex;
+    inset:0;
+    width: 100vw;
+    height: 100vh;
+
+    z-index: 100;
+    flex-direction: column;
+    align-items:center ;
+    justify-content:center;
+    background-color: black;
+}
+
+.titulo-iniciar{
+    background-color: #5d696db6;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 5px;
+    font-size: 3em;
+    padding: 10px;
+    margin: 80px;
+}
+
+.start-game{
+    font-size: 2em;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+.start-game:hover{
+    background-color: #534f4f74;
+}
+
 .game-board{
     width: 100vw;
     height: 500px;
@@ -20,7 +54,8 @@
     position: absolute;
     bottom: 0;
     width: 60px;
-    animation:pipe-animation 1.5s infinite linear;
+    animation:pipe-animation 1.5s infinite linear ;
+    animation-play-state: paused;
 }
 
 .mario{
@@ -35,6 +70,7 @@
     max-width: 700px;
     min-width: 250px;
     animation: clouds-animation 20s infinite linear;
+    animation-play-state: paused;
     
 }
 

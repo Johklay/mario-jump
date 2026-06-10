@@ -1,9 +1,14 @@
 const mario = document.querySelector('.mario')
 const pipe = document.querySelector('.pipe')
 const cloud = document.querySelector('.clouds')
+const startButton = document.querySelector('.start-game')
+const startScreen = document.querySelector('.start')
+let gameStarted = false;
 
 const jump  = (event) => {
     event?.preventDefault();
+
+    if(!gameStarted) return;
 
     if (document.body.classList.contains('game-over')) return;
     if (mario.classList.contains('jump')) return;
@@ -11,6 +16,13 @@ const jump  = (event) => {
     mario.classList.add('jump')
 
 }
+
+startButton.addEventListener('click', () =>{
+    gameStarted = true;
+    startScreen.style.display = 'none';
+    pipe.style.animationPlayState = 'running';
+    cloud.style.animationPlayState  = 'running';
+})
 
 /*const restartButton = document.getElementById('restart')
 restartButton.style.display = 'block'
